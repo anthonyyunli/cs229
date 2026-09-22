@@ -3,6 +3,7 @@ from env import CartPole, Physics
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.signal import lfilter
+import os
 
 """
 Parts of the code (cart and pole dynamics, and the state
@@ -125,6 +126,12 @@ def choose_action(state, mdp_data):
     """
 
     # *** START CODE HERE ***
+    tr_probs = mdp_data['transition_probs'][state]
+    value = mdp_data['value']
+    
+    expect_value = value.dot(tr_probs)
+    return np.argmax(expect_value)
+    
     # *** END CODE HERE ***
 
 def update_mdp_transition_counts_reward_counts(mdp_data, state, action, new_state, reward):
@@ -149,6 +156,14 @@ def update_mdp_transition_counts_reward_counts(mdp_data, state, action, new_stat
     """
 
     # *** START CODE HERE ***
+    
+    tr_counts = mdp_data['transition_counts']
+    reward_counts = mdp_data['reward_counts']
+    
+    tr_counts[state, new_state, action] += 1
+    if reward == -1: reward_counts[new_state, 0] += 1
+    reward_counts[new_state, 1] += 1
+    
     # *** END CODE HERE ***
 
     # This function does not return anything
@@ -172,6 +187,16 @@ def update_mdp_transition_probs_reward(mdp_data):
     """
 
     # *** START CODE HERE ***
+    tr_counts = mdp_data['transition_counts']
+    tr_probs = mdp_data['transition_probs']
+    
+    reward_counts = mdp_data['reward_counts']
+    
+    total = np.sum(tr_counts, axis=1, keepdims=True)
+    np.divide(tr_counts, total, out=tr_probs, where=(total!=0))
+    
+    mask = reward_counts[:, 1]!=0
+    mdp_data['reward'][mask] = - reward_counts[mask, 0] / reward_counts[mask, 1]  
     # *** END CODE HERE ***
 
     # This function does not return anything
@@ -198,11 +223,29 @@ def update_mdp_value(mdp_data, tolerance, gamma):
     """
 
     # *** START CODE HERE ***
+    
+    tr_probs = mdp_data['transition_probs']
+    
+    reward = mdp_data['reward']
+    value = mdp_data['value']
+    
+    iters = 0
+    while True:
+        iters += 1
+                 
+        value_new = reward + gamma * np.max(value.dot(tr_probs), axis=1)
+        if np.max(np.abs(value_new-value)) < tolerance: break
+        
+        value = value_new
+    
+    mdp_data['value'] = value_new
+    
+    return iters == 1
     # *** END CODE HERE ***
 
 def main(plot=True):
     # Seed the randomness of the simulation so this outputs the same thing each time
-    seed = 0
+    seed = 2
     np.random.seed(seed)
 
     # Simulation parameters
@@ -328,4 +371,6 @@ def main(plot=True):
     return np.array(time_steps_to_failure)
     
 if __name__ == '__main__':
+    os.chdir("/home/alexander/Projects/cs229/problem-sets/PS4")
+    print(os.getcwd())
     main()

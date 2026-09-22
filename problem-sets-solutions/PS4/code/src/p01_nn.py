@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
 MAX_POOL_SIZE = 5
 CONVOLUTION_SIZE = 4
 CONVOLUTION_FILTERS = 2
@@ -519,7 +523,11 @@ def run_train(all_data, all_labels, backward_prop_func):
 
 def main():
     np.random.seed(100)
-    train_data, train_labels = read_data('../data/images_train.csv', '../data/labels_train.csv')
+    
+    images_path = BASE_DIR / '../data/images_train.csv'
+    labels_path = BASE_DIR / '../data/labels_train.csv'
+    
+    train_data, train_labels = read_data(images_path.resolve(), labels_path.resolve())
     train_labels = one_hot_labels(train_labels)
     p = np.random.permutation(60000)
     train_data = train_data[p,:]

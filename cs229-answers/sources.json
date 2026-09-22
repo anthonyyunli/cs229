@@ -1,0 +1,259 @@
+[
+  {
+    "folder": "01-logistic-regression",
+    "source": "problem-sets/PS1/PS1-1A.ipynb",
+    "source_sha256": "86a063b135ff9d4ef24dd8cca30edf4aea9010a1c623343e0222af5fb6c0e6b8",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "extra_script_cells": {},
+    "support_files": [
+      "util.py",
+      "linear_model.py"
+    ]
+  },
+  {
+    "folder": "02-gaussian-discriminant-analysis",
+    "source": "problem-sets/PS1/PS1-1A.ipynb",
+    "source_sha256": "86a063b135ff9d4ef24dd8cca30edf4aea9010a1c623343e0222af5fb6c0e6b8",
+    "script_cells": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12
+    ],
+    "extra_script_cells": {},
+    "support_files": [
+      "util.py",
+      "linear_model.py"
+    ]
+  },
+  {
+    "folder": "03-positive-only-learning",
+    "source": "problem-sets/PS1/PS1-2A.ipynb",
+    "source_sha256": "c00079ec75fa019e03c3594ef0202ee46883ae434cbaf1d88954ce0e91a71f2b",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "extra_script_cells": {},
+    "support_files": [
+      "util.py",
+      "linear_model.py"
+    ]
+  },
+  {
+    "folder": "04-poisson-regression",
+    "source": "problem-sets/PS1/PS1-3A.ipynb",
+    "source_sha256": "8d7496d3cfe13bc2c265dcb370840beaaea7fdb4997dd78afb6f538907c85f3f",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "extra_script_cells": {},
+    "support_files": [
+      "util.py",
+      "linear_model.py"
+    ]
+  },
+  {
+    "folder": "05-locally-weighted-regression",
+    "source": "problem-sets/PS1/PS1-5A.ipynb",
+    "source_sha256": "f723e25dfb63452d61428ba82c26fe3f7158c681696aab7fe7f6bf90e14a80f4",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "extra_script_cells": {},
+    "support_files": [
+      "util.py",
+      "linear_model.py"
+    ]
+  },
+  {
+    "folder": "06-kernel-perceptron",
+    "source": "problem-sets/PS2/PS2-2A.ipynb",
+    "source_sha256": "c08e66aa24302198a41b5ae847a982cd9c047b02f487df3c4a3fda636ac0fda5",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "extra_script_cells": {},
+    "support_files": [
+      "util.py"
+    ]
+  },
+  {
+    "folder": "07-naive-bayes",
+    "source": "problem-sets/PS2/PS2-3A.ipynb",
+    "source_sha256": "7c70c93b849cf252a2bedab6a9bbfd231e4d3143441315b1f409833a61af7592",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "extra_script_cells": {},
+    "support_files": [
+      "util.py",
+      "svm.py"
+    ]
+  },
+  {
+    "folder": "08-neural-network",
+    "source": "problem-sets/PS3/src/p01_nn.py",
+    "source_sha256": "748c0b853244f96c0857662cd7872f4cf7cabe2de467423a11d3034436cd66e7",
+    "script_cells": null,
+    "extra_script_cells": {},
+    "support_files": []
+  },
+  {
+    "folder": "09-gaussian-mixture-model",
+    "source": "problem-sets/PS3/PS3-4A.ipynb",
+    "source_sha256": "637ca32223c9853559fb7c4441fab5e956a73217d76737aa0a0ae1862adc96d8",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "extra_script_cells": {},
+    "support_files": []
+  },
+  {
+    "folder": "10-k-means",
+    "source": "problem-sets/PS3/PS3-5a.ipynb",
+    "source_sha256": "c266a1e58b776a72daee0f7c753f6e5061db08ace79e7d46b7e50af489e2a3b6",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "extra_script_cells": {},
+    "support_files": []
+  },
+  {
+    "folder": "11-convolutional-neural-network",
+    "source": "problem-sets/PS4/PS4-1A.ipynb",
+    "source_sha256": "4162510fa30c7e3fc7571f46e4fb7c65d794a0100737241466c7ee2566970596",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "extra_script_cells": {
+      "draw_digit.py": [
+        10
+      ]
+    },
+    "support_files": []
+  },
+  {
+    "folder": "12-independent-component-analysis",
+    "source": "problem-sets/PS4/PS4-4A.ipynb",
+    "source_sha256": "c26372c408b605003607d7242d0f6233666f3777b3196834b0735cf7e1678a44",
+    "script_cells": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "extra_script_cells": {},
+    "support_files": []
+  },
+  {
+    "folder": "13-reinforcement-learning",
+    "source": "problem-sets/PS4/src/p06_cartpole.py",
+    "source_sha256": "2192f7cb0e1c2095c8200a13cbd102bc5397fe5804e9334434562be54e78fb46",
+    "script_cells": null,
+    "extra_script_cells": {},
+    "support_files": [
+      "env.py"
+    ]
+  }
+]
