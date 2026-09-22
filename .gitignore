@@ -1,2 +1,10 @@
-.env
-__pycache__/problem-sets/PS4/data/images_train.csv
+.env/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+problem-sets/PS4/data/images_train.csv
